@@ -1,24 +1,26 @@
-import { Button } from "./Button";
+import { ChangeEvent } from "react";
 
 function App() {
-  const handleClick = () => {};
+  const handleClick = () => {
+    alert("clicked");
+  };
 
-  const handleReset = () => {};
-
-  const handleNext = () => {};
-  const handlePrevious = () => {};
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    console.log(`changing... ${event.target.value}`);
+  };
 
   return (
     <div>
-      <input type="text" />
-      <Button disabled={false} onClick={handleClick}>
-        Click Me!
-      </Button>
-      <Button onClick={handleReset}>
-        <div>Reset</div>
-      </Button>
-      <Button onClick={handlePrevious}>Previous Page</Button>
-      <Button onClick={handleNext}>Next Page</Button>
+      <input type="text" onChange={handleChange} />
+
+      <select onChange={handleChange}>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button onClick={handleClick}></button>
     </div>
   );
 }
