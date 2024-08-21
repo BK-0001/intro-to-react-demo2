@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import Form from "./form";
 
 function App() {
   const handleClick = () => {
@@ -30,6 +31,17 @@ function App() {
         <option value="3">3</option>
       </select>
       <button onClick={handleClick}></button>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <Form />
     </div>
   );
 }
