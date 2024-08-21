@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { Counter } from "./Counter";
 import Form from "./form";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <br />
 
       <Form />
+      <Counter />
     </div>
   );
 }
