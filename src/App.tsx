@@ -13,6 +13,15 @@ function App() {
 
   return (
     <div>
+      <input
+        type="password"
+        onFocus={() => {
+          console.log("input focused");
+        }}
+        onBlur={() => {
+          console.log("input element is no longer focused");
+        }}
+      />
       <input type="text" onChange={handleChange} />
 
       <select onChange={handleChange}>
